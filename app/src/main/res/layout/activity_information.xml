@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.example.hotels.InformationActivity">
+
+        <include layout="@layout/toolbar"/>
+
+        <FrameLayout android:id="@+id/infoContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout android:id="@+id/downloadInfoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView android:text="@string/download_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/download_info_text"/>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id = "@+id/id_content_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/text_left_padding"
+                android:paddingRight="@dimen/text_left_padding"
+                android:paddingTop="@dimen/text_top_padding">
+
+                <TextView
+                    android:id = "@+id/hotel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/full_info_name"
+                    android:textColor="@color/colorTextName"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id = "@+id/hotel_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/full_info_text"/>
+
+                <TextView
+                    android:id = "@+id/download_photo_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/download_info_text"
+                    android:visibility="gone"
+                    android:layout_gravity = "center"
+                    android:text = "@string/download_photo"/>
+
+                <ProgressBar
+                    android:id = "@+id/photo_download_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id = "@+id/id_hotel_image"
+                    android:layout_width = "@dimen/picture_preview_width"
+                    android:layout_height="@dimen/picture_preview_height" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+</ScrollView>
